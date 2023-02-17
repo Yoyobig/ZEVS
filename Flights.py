@@ -41,7 +41,7 @@ def get_time_zone(code):
             return airport[1]
 
 Base_airline = st.sidebar.text_input("Код базовой авиакомпании", "H4")
-api_key = st.sidebar.text_input("API Ключ Яндекс.Расписания", "")
+api_key = st.sidebar.text_input("API Ключ Яндекс.Расписания", "a342f8d4-ee2d-4b4f-bd16-291ae227147b")
 
 first_array = st.sidebar.text_input("Аэропорт(ы) набор 1", "LED")
 second_array = st.sidebar.text_input("Аэропорт(ы) набор 2", "SVX KJA")
