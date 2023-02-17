@@ -53,10 +53,6 @@ for element1 in first_array.split(' '):
         tuples.append((element1, element2))
         tuples.append((element2, element1))
 
-
-#start_date = st.date_input(label='Начальная дата', key='start_date')
-#end_date = st.date_input(label='Конечная дата', key='end_date')
-
 start_date = datetime.now()
 end_date = datetime.now() + timedelta(days=1)
 start_date, end_date = st.date_input('Период (доступно до 30 дней назад и 11 месяцев вперед от текущей даты)', [start_date, end_date])
@@ -68,8 +64,8 @@ else:
 
 # определяем окно для выбора подходящих рейсов для ДХ. Указываем в минутах
 # берем те рейсы, которые улетают из аэропорта, куда прилетел рейс в течение окна, указанного в минутах ниже
-st.markdown('<style> .stSlider > div { width: 100%; } </style>', unsafe_allow_html=True)
-start_window, end_window = st.slider('Окно поиска DH относительно прилёта', 0, 1440, (0, 1440))
+#st.markdown('<style> .stSlider > div { width: 100%; } </style>', unsafe_allow_html=True)
+#start_window, end_window = st.slider('Окно поиска DH относительно прилёта', 0, 1440, (0, 1440))
 
 
 edges = tuples
