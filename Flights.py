@@ -40,7 +40,7 @@ def get_time_zone(code):
         if airport[0] == code:
             return airport[1]
 
-Base_airline = st.sidebar.text_input("Код базовой авиакомпании", "H4")
+Base_airline = st.sidebar.text_input("Код базовой авиакомпании", "SU")
 api_key = st.sidebar.text_input("API Ключ Яндекс.Расписания", "a342f8d4-ee2d-4b4f-bd16-291ae227147b")
 
 first_array = st.sidebar.text_input("Аэропорт(ы) набор 1", "LED")
@@ -60,7 +60,7 @@ if start_date < end_date:
     pass
 else:
     st.error('Неверный диапазон дат')
-
+days_modified = st.text_input('Сдвиг даты прилёта/вылета на нужное количество дней','0')
 
 # определяем окно для выбора подходящих рейсов для ДХ. Указываем в минутах
 # берем те рейсы, которые улетают из аэропорта, куда прилетел рейс в течение окна, указанного в минутах ниже
