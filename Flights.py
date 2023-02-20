@@ -182,12 +182,12 @@ if st.button('Сгенерировать'):
                 new_flight['serviceType'] = 'J'
 
                 date_time = datetime.strptime(entry[3], '%Y-%m-%dT%H:%M:%S%z')
-                date_time = date_time - timedelta(days=243)
+                date_time = date_time - timedelta(days=days_modified)
 
                 new_flight['departureDateUtc'] = date_time.strftime('%Y-%m-%dT%H:%M:%SZ')
 
                 date_time = datetime.strptime(entry[4], '%Y-%m-%dT%H:%M:%S%z')
-                date_time = date_time - timedelta(days=243)
+                date_time = date_time - timedelta(days=days_modified)
 
                 new_flight['arrivalDateUtc'] = date_time.strftime('%Y-%m-%dT%H:%M:%SZ')
 
@@ -196,7 +196,7 @@ if st.button('Сгенерировать'):
                 time_obj = datetime.strptime(entry[3], '%Y-%m-%dT%H:%M:%S%z')
                 tz = pytz.timezone(get_time_zone(entry[1]))
                 time_obj = time_obj.astimezone(tz)
-                time_obj = time_obj - timedelta(days=243)
+                time_obj = time_obj - timedelta(days=days_modified)
                 local_datetime = time_obj.strftime('%Y-%m-%dT%H:%M:%S')
 
                 new_flight['dateTimeDepartureLocal'] = local_datetime
